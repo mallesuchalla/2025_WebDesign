@@ -417,6 +417,7 @@
     <Content Include="VPS.aspx" />
     <Content Include="vps_hosting.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="Website.aspx" />
     <Content Include="website_builder.aspx" />
     <Content Include="Webuzo.aspx" />
@@ -1193,6 +1194,13 @@
     </Compile>
     <Compile Include="vps_hosting.aspx.designer.cs">
       <DependentUpon>vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Website.aspx.cs">
       <DependentUpon>Website.aspx</DependentUpon>
