@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Ditsmart.Home" %>
 
+
+
+
 <!DOCTYPE html>
 <html lang="en-in">
 <head>
@@ -20,6 +23,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+    // NEW LIJNES ADDED BY MALLESU ON 03/04/2025 FOR TESTING
+    <title>GENBASE SOFTWARE JEWELLERY MANAGEMENT SOFTWARE </title>
+     
+
+    // END OF THE ABOVE LINES
     <title>Host IT Smart - India&#039;s Premier Web Hosting Solutions</title>
 
     <meta name="description" content="Get reliable &amp; high-performance hosting services tailored to fuel your success from Host IT Smart for a seamless journey to online prosperity.">
