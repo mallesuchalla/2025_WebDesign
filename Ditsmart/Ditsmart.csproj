@@ -1,0 +1,1339 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9A23BAB-431A-4659-8D37-B86B6775CA99}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ditsmart</RootNamespace>
+    <AssemblyName>Ditsmart</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <IISExpressSSLPort>44314</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.CodeDom, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.9.0.2\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about_us.aspx" />
+    <Content Include="account.aspx" />
+    <Content Include="acronis-backup.aspx" />
+    <Content Include="announcements.aspx" />
+    <Content Include="aws_support_services.aspx" />
+    <Content Include="blog.aspx" />
+    <Content Include="bulk_domain_search.aspx" />
+    <Content Include="buy_com_domain_names.aspx" />
+    <Content Include="buy_info_domain_names.aspx" />
+    <Content Include="buy_in_domain_names.aspx" />
+    <Content Include="buy_org_domain_names.aspx" />
+    <Content Include="canada.aspx" />
+    <Content Include="careers.aspx" />
+    <Content Include="cart_domain_registration.aspx" />
+    <Content Include="cart_domain_transfer_to_Us.aspx" />
+    <Content Include="change-password.aspx" />
+    <Content Include="Change_Website_Location.aspx" />
+    <Content Include="check-port-open-or-not-in-linux.aspx" />
+    <Content Include="clientarea.aspx" />
+    <Content Include="clientarea_styles\all.min.css" />
+    <Content Include="clientarea_styles\css.css" />
+    <Content Include="clientarea_styles\fontawesome-all.min.css" />
+    <Content Include="clientarea_styles\scripts.min.js" />
+    <Content Include="clientaria_cart.aspx" />
+    <Content Include="Clients_Support.aspx" />
+    <Content Include="Collapse\#collapse0.aspx" />
+    <Content Include="Collapse\#collapse1.aspx" />
+    <Content Include="Collapse\#collapse10.aspx" />
+    <Content Include="Collapse\#collapse11.aspx" />
+    <Content Include="Collapse\#collapse12.aspx" />
+    <Content Include="Collapse\#collapse13.aspx" />
+    <Content Include="Collapse\#collapse14.aspx" />
+    <Content Include="Collapse\#collapse15.aspx" />
+    <Content Include="Collapse\#collapse16.aspx" />
+    <Content Include="Collapse\#collapse17.aspx" />
+    <Content Include="Collapse\#collapse18.aspx" />
+    <Content Include="Collapse\#collapse19.aspx" />
+    <Content Include="Collapse\#collapse2.aspx" />
+    <Content Include="Collapse\#collapse20.aspx" />
+    <Content Include="Collapse\#collapse21.aspx" />
+    <Content Include="Collapse\#collapse3.aspx" />
+    <Content Include="Collapse\#collapse4.aspx" />
+    <Content Include="Collapse\#collapse5.aspx" />
+    <Content Include="Collapse\#collapse6.aspx" />
+    <Content Include="Collapse\#collapse7.aspx" />
+    <Content Include="Collapse\#collapse8.aspx" />
+    <Content Include="Collapse\#collapse9.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="cPanel.aspx" />
+    <Content Include="create-new-group-in-linux.aspx" />
+    <Content Include="create-zip-file-in-linux.aspx" />
+    <Content Include="deals#SERVERS.aspx" />
+    <Content Include="deals#Web_Hosting.aspx" />
+    <Content Include="dedicated_servers.aspx" />
+    <Content Include="domain_registration.aspx" />
+    <Content Include="domain_registration1.aspx" />
+    <Content Include="domain_transfer.aspx" />
+    <Content Include="download.aspx" />
+    <Content Include="echo-command-in-linux.aspx" />
+    <Content Include="ecommerce_hosting.aspx" />
+    <Content Include="forex_vps_hosting.aspx" />
+    <Content Include="forgot-password.aspx" />
+    <Content Include="front-login.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="global.aspx" />
+    <Content Include="global_about_us.aspx" />
+    <Content Include="global_contact.aspx" />
+    <Content Include="global_web_hosting.aspx" />
+    <Content Include="google_workspace_india.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Home_Styles\all.min.css" />
+    <Content Include="Home_Styles\common.css" />
+    <Content Include="Home_Styles\custom.css" />
+    <Content Include="Home_Styles\diwali-23-banner.css" />
+    <Content Include="Home_Styles\domain-landing.css" />
+    <Content Include="Home_Styles\full-width-inner-banner.css" />
+    <Content Include="Home_Styles\homepage.css" />
+    <Content Include="Home_Styles\hostadvice-award.css" />
+    <Content Include="Home_Styles\new-header23.css" />
+    <Content Include="host-it-smart-reviews.aspx" />
+    <Content Include="Images\11+_Years_of_Experience.png" />
+    <Content Include="Images\2018-06-21-15-10-54-aboutbanner.jpg" />
+    <Content Include="Images\2021-08-13-15-46-59-2018-06-18-14-59-01-vps-hosting-banner.png" />
+    <Content Include="Images\2021-top-10-web-hosting.png" />
+    <Content Include="Images\24X7_Support.png" />
+    <Content Include="Images\30-Day_Money_Back_Guarantee.png" />
+    <Content Include="Images\about_cloudlinux.png" />
+    <Content Include="Images\about_cpanel.png" />
+    <Content Include="Images\about_google_partner.png" />
+    <Content Include="Images\about_icann.png" />
+    <Content Include="Images\about_partners_microsoft.png" />
+    <Content Include="Images\ajaxloader2.gif" />
+    <Content Include="Images\apple-touch-icon-114.png" />
+    <Content Include="Images\apple-touch-icon-144.png" />
+    <Content Include="Images\apple-touch-icon-57.png" />
+    <Content Include="Images\apple-touch-icon-72.png" />
+    <Content Include="Images\black-friday-BG.png" />
+    <Content Include="Images\black-friday-bnnr2.png" />
+    <Content Include="Images\blazing_website_speed.png" />
+    <Content Include="Images\business_email.png" />
+    <Content Include="Images\canada-icons.png" />
+    <Content Include="Images\canada_flag.png" />
+    <Content Include="Images\check-icon.png" />
+    <Content Include="Images\clippy.png" />
+    <Content Include="Images\control_panel_box.png" />
+    <Content Include="Images\customer_delight.png" />
+    <Content Include="Images\deals-icon.png" />
+    <Content Include="Images\dedicated-server %281%29.png" />
+    <Content Include="Images\dedicated-server.png" />
+    <Content Include="Images\dedicated_server.png" />
+    <Content Include="Images\dmn-register.png" />
+    <Content Include="Images\Domain-Brothers_v2.png" />
+    <Content Include="Images\domain-registration-sprite.png" />
+    <Content Include="Images\domain_icon1.png" />
+    <Content Include="Images\domain_transfer.png" />
+    <Content Include="Images\dotcom.png" />
+    <Content Include="Images\dotin.png" />
+    <Content Include="Images\dotinfo.png" />
+    <Content Include="Images\dotorg.png" />
+    <Content Include="Images\Ease_of_Setup.png" />
+    <Content Include="Images\ecommerce-hosting.png" />
+    <Content Include="Images\ecommerce_hosting_icon3.png" />
+    <Content Include="Images\Enterprise_Hardware.png" />
+    <Content Include="Images\Experience_lightning.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\features-1.png" />
+    <Content Include="Images\features-2.png" />
+    <Content Include="Images\features-3.png" />
+    <Content Include="Images\features-4.png" />
+    <Content Include="Images\features-5.png" />
+    <Content Include="Images\features-6.png" />
+    <Content Include="Images\forex-vps.png" />
+    <Content Include="Images\Free_Backups_cPanel.png" />
+    <Content Include="Images\Free_SSL_Certificate.png" />
+    <Content Include="Images\germany-icons.png" />
+    <Content Include="Images\global_icon.png" />
+    <Content Include="Images\google-icon.png" />
+    <Content Include="Images\google-logo.png" />
+    <Content Include="Images\google-rating-logo_new.png" />
+    <Content Include="Images\Hero-Banner-img.png" />
+    <Content Include="Images\hostadvice-logo.png" />
+    <Content Include="Images\HostAdvice-rating-logo_new.png" />
+    <Content Include="Images\hosting-sprite.png" />
+    <Content Include="Images\india-icons.png" />
+    <Content Include="Images\india_flag.png" />
+    <Content Include="Images\left_arrow.png" />
+    <Content Include="Images\linux-hosting.png" />
+    <Content Include="Images\login-bg.png" />
+    <Content Include="Images\login-image.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mdQNdcFMi0p.png" />
+    <Content Include="Images\microsoft365-icon.png" />
+    <Content Include="Images\No_Overselling.png" />
+    <Content Include="Images\Offers_img.png" />
+    <Content Include="Images\one_click_box.png" />
+    <Content Include="Images\overlay-spinner.png" />
+    <Content Include="Images\partners_acronis.png" />
+    <Content Include="Images\partners_amazonwebservice.png" />
+    <Content Include="Images\partners_cpanel_v2.png" />
+    <Content Include="Images\partners_cwp_v2.png" />
+    <Content Include="Images\partners_googlegsuite.png" />
+    <Content Include="Images\partners_icann_v2.png" />
+    <Content Include="Images\partners_plesk.png" />
+    <Content Include="Images\partners_softaculous.png" />
+    <Content Include="Images\partners_webuzo.png" />
+    <Content Include="Images\partner_microsoft_SPLA.png" />
+    <Content Include="Images\Quality_hardware.png" />
+    <Content Include="Images\right_arrow.png" />
+    <Content Include="Images\Robust_hosting.png" />
+    <Content Include="Images\search-icon.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\server2.png" />
+    <Content Include="Images\server_location_map.png" />
+    <Content Include="Images\server_location_map_new.png" />
+    <Content Include="Images\shared_hosting.png" />
+    <Content Include="Images\SSD_Based_Servers.png" />
+    <Content Include="Images\ssl-sprite.png" />
+    <Content Include="Images\ssl_icon3.png" />
+    <Content Include="Images\star-2.png" />
+    <Content Include="Images\star-icon.png" />
+    <Content Include="Images\star-rating-g.png" />
+    <Content Include="Images\star-rating.png" />
+    <Content Include="Images\star.png" />
+    <Content Include="Images\Support_img.png" />
+    <Content Include="Images\transfer-icon.png" />
+    <Content Include="Images\trustpilot-logo.png" />
+    <Content Include="Images\Trustpilot-rating-logo_new.png" />
+    <Content Include="Images\ujTY9i_Jhs1.png" />
+    <Content Include="Images\Uptime_Guarantee.png" />
+    <Content Include="Images\verifyimage.png" />
+    <Content Include="Images\VPS-add.png" />
+    <Content Include="Images\VPS-hosting.png" />
+    <Content Include="Images\vps.png" />
+    <Content Include="Images\web-hosting-icon.png" />
+    <Content Include="Images\website_builder_icon2.png" />
+    <Content Include="Images\website_migration.png" />
+    <Content Include="Images\web_hosting_banner_img.png" />
+    <Content Include="Images\web_hosting_services_box.png" />
+    <Content Include="Images\web_hosting_tips.png" />
+    <Content Include="Images\window.png" />
+    <Content Include="Images\windows-hosting.png" />
+    <Content Include="Images\windows_hosting_icon_1.png" />
+    <Content Include="Images\windows_vps_hosting.png" />
+    <Content Include="Images\window_vps.png" />
+    <Content Include="Images\wordpress-hosting.png" />
+    <Content Include="Images\wordpress.png" />
+    <Content Include="Images\wordpress_hosting_icon2.png" />
+    <Content Include="index.aspx" />
+    <Content Include="install-gcc-compiler-on-windows.aspx" />
+    <Content Include="install-rpm-files-on-linux.aspx" />
+    <Content Include="JS\api.js" />
+    <Content Include="JS\bootstrap.bundle.min.js" />
+    <Content Include="JS\bootstrap.min.js" />
+    <Content Include="JS\common_v12.js" />
+    <Content Include="JS\contact.js" />
+    <Content Include="JS\counter.js" />
+    <Content Include="JS\custom.js" />
+    <Content Include="JS\gtm.js" />
+    <Content Include="JS\hs.megamenu.js" />
+    <Content Include="JS\jquery-3.6.4.min.js" />
+    <Content Include="JS\jquery.rcounterup.js" />
+    <Content Include="JS\KlfOnuX2IHm.js" />
+    <Content Include="JS\magnific-popup.min.js" />
+    <Content Include="JS\owl.carousel.min.js" />
+    <Content Include="JS\popper.min.js" />
+    <Content Include="JS\validation-captcha.js" />
+    <Content Include="JS\webfont.js" />
+    <Content Include="JS\whmcs-products.js" />
+    <Content Include="knowledgebase.aspx" />
+    <Content Include="knowledgebase_comments_feed.aspx" />
+    <Content Include="knowledgebase_feed.aspx" />
+    <Content Include="Knowledgebase_libraries\all.min.css" />
+    <Content Include="Knowledgebase_libraries\animate.css" />
+    <Content Include="Knowledgebase_libraries\block-frontend.css" />
+    <Content Include="Knowledgebase_libraries\blocks.css" />
+    <Content Include="Knowledgebase_libraries\bootstrap.min.css" />
+    <Content Include="Knowledgebase_libraries\bootstrap.min.js" />
+    <Content Include="Knowledgebase_libraries\bootstrap.min1.css" />
+    <Content Include="Knowledgebase_libraries\bootstrap.min2.js" />
+    <Content Include="Knowledgebase_libraries\css2.css" />
+    <Content Include="Knowledgebase_libraries\css22.css" />
+    <Content Include="Knowledgebase_libraries\css222.css" />
+    <Content Include="Knowledgebase_libraries\css2222.css" />
+    <Content Include="Knowledgebase_libraries\dashicons.min.css" />
+    <Content Include="Knowledgebase_libraries\ed27f87617fb1ab76f8480b4a9ac7eb7.css" />
+    <Content Include="Knowledgebase_libraries\fontawesome-all.css" />
+    <Content Include="Knowledgebase_libraries\jquery-3.2.1.slim.min.js" />
+    <Content Include="Knowledgebase_libraries\jquery-3.2.1.slim.min1.js" />
+    <Content Include="Knowledgebase_libraries\jquery-migrate.min.js" />
+    <Content Include="Knowledgebase_libraries\jquery.min.js" />
+    <Content Include="Knowledgebase_libraries\style.css" />
+    <Content Include="Knowledgebase_libraries\style.min.css" />
+    <Content Include="Knowledgebase_libraries\style1.css" />
+    <Content Include="Knowledgebase_libraries\text-only.min.css" />
+    <Content Include="Knowledgebase_libraries\validation-captcha.js" />
+    <Content Include="Knowledgebase_libraries\wow.js" />
+    <Content Include="linux_hosting.aspx" />
+    <Content Include="locating-and-editing-host-file-in-windows.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="ls-command-in-linux.aspx" />
+    <Content Include="managed_vps_hosting.aspx" />
+    <Content Include="microsoft_office_365_suite.aspx" />
+    <Content Include="Network_Status.aspx" />
+    <Content Include="password_reset.aspx" />
+    <Content Include="phone=919978960490.aspx" />
+    <Content Include="Plesk.aspx" />
+    <Content Include="privacy-policy.aspx" />
+    <Content Include="privacy_policy.aspx" />
+    <Content Include="remove-directory-in-linux.aspx" />
+    <Content Include="send.aspx" />
+    <Content Include="sitemap.aspx" />
+    <Content Include="ssl_certificates.aspx" />
+    <Content Include="store_dedicated_servers.aspx" />
+    <Content Include="store_email_solution.aspx" />
+    <Content Include="store_e_commerce_hosting.aspx" />
+    <Content Include="store_forex_vps_hosting.aspx" />
+    <Content Include="store_linux_hosting.aspx" />
+    <Content Include="store_linux_managed_vps_hosting.aspx" />
+    <Content Include="store_linux_reseller_hosting.aspx" />
+    <Content Include="store_linux_self_managed_vps_hosting.aspx" />
+    <Content Include="store_windows_hosting.aspx" />
+    <Content Include="store_windows_vps_hosting.aspx" />
+    <Content Include="store_wordpress_hosting.aspx" />
+    <Content Include="Styles\about-us.css" />
+    <Content Include="Styles\all.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\common.css" />
+    <Content Include="Styles\contact-us.css" />
+    <Content Include="Styles\css.css" />
+    <Content Include="Styles\css2.css" />
+    <Content Include="Styles\custom.css" />
+    <Content Include="Styles\D7Rs-NfkIB2.css" />
+    <Content Include="Styles\diwali-23-banner.css" />
+    <Content Include="Styles\domain-landing.css" />
+    <Content Include="Styles\full-width-inner-banner.css" />
+    <Content Include="Styles\hostadvice-award.css" />
+    <Content Include="Styles\i-hBEEjmh8u.css" />
+    <Content Include="Styles\new-header23.css" />
+    <Content Include="Styles\owl.carousel.min.css" />
+    <Content Include="Styles\owl.theme.default.min.css" />
+    <Content Include="Styles\VApwUL7qU0B.css" />
+    <Content Include="Styles\Web_Hosting.css" />
+    <Content Include="Styles\web_hosting_banner_24.css" />
+    <Content Include="submitticket.aspx" />
+    <Content Include="supporttickets.aspx" />
+    <Content Include="telnet-command-in-windows.aspx" />
+    <Content Include="terms.aspx" />
+    <Content Include="testimonials.aspx" />
+    <Content Include="tld.aspx" />
+    <Content Include="vnlbs-it-smart-reviews.aspx" />
+    <Content Include="VPS.aspx" />
+    <Content Include="vps_hosting.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Website.aspx" />
+    <Content Include="website_builder.aspx" />
+    <Content Include="Webuzo.aspx" />
+    <Content Include="web_hosting.aspx" />
+    <Content Include="web_hosting_affiliates.aspx" />
+    <Content Include="whm.aspx" />
+    <Content Include="whois.aspx" />
+    <Content Include="windows_hosting.aspx" />
+    <Content Include="windows_vps_hosting.aspx" />
+    <Content Include="Wordpress.aspx" />
+    <Content Include="wordpress_hosting.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about_us.aspx.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about_us.aspx.designer.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="account.aspx.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account.aspx.designer.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="acronis-backup.aspx.cs">
+      <DependentUpon>acronis-backup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acronis-backup.aspx.designer.cs">
+      <DependentUpon>acronis-backup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="announcements.aspx.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="announcements.aspx.designer.cs">
+      <DependentUpon>announcements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="aws_support_services.aspx.cs">
+      <DependentUpon>aws_support_services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aws_support_services.aspx.designer.cs">
+      <DependentUpon>aws_support_services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="blog.aspx.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="blog.aspx.designer.cs">
+      <DependentUpon>blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bulk_domain_search.aspx.cs">
+      <DependentUpon>bulk_domain_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bulk_domain_search.aspx.designer.cs">
+      <DependentUpon>bulk_domain_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy_com_domain_names.aspx.cs">
+      <DependentUpon>buy_com_domain_names.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy_com_domain_names.aspx.designer.cs">
+      <DependentUpon>buy_com_domain_names.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy_info_domain_names.aspx.cs">
+      <DependentUpon>buy_info_domain_names.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy_info_domain_names.aspx.designer.cs">
+      <DependentUpon>buy_info_domain_names.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy_in_domain_names.aspx.cs">
+      <DependentUpon>buy_in_domain_names.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy_in_domain_names.aspx.designer.cs">
+      <DependentUpon>buy_in_domain_names.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buy_org_domain_names.aspx.cs">
+      <DependentUpon>buy_org_domain_names.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buy_org_domain_names.aspx.designer.cs">
+      <DependentUpon>buy_org_domain_names.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="canada.aspx.cs">
+      <DependentUpon>canada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="canada.aspx.designer.cs">
+      <DependentUpon>canada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="careers.aspx.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="careers.aspx.designer.cs">
+      <DependentUpon>careers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart_domain_registration.aspx.cs">
+      <DependentUpon>cart_domain_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart_domain_registration.aspx.designer.cs">
+      <DependentUpon>cart_domain_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart_domain_transfer_to_Us.aspx.cs">
+      <DependentUpon>cart_domain_transfer_to_Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart_domain_transfer_to_Us.aspx.designer.cs">
+      <DependentUpon>cart_domain_transfer_to_Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change-password.aspx.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change-password.aspx.designer.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Change_Website_Location.aspx.cs">
+      <DependentUpon>Change_Website_Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Change_Website_Location.aspx.designer.cs">
+      <DependentUpon>Change_Website_Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="check-port-open-or-not-in-linux.aspx.cs">
+      <DependentUpon>check-port-open-or-not-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="check-port-open-or-not-in-linux.aspx.designer.cs">
+      <DependentUpon>check-port-open-or-not-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientarea.aspx.cs">
+      <DependentUpon>clientarea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientarea.aspx.designer.cs">
+      <DependentUpon>clientarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clientaria_cart.aspx.cs">
+      <DependentUpon>clientaria_cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clientaria_cart.aspx.designer.cs">
+      <DependentUpon>clientaria_cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients_Support.aspx.cs">
+      <DependentUpon>Clients_Support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients_Support.aspx.designer.cs">
+      <DependentUpon>Clients_Support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse0.aspx.cs">
+      <DependentUpon>#collapse0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse0.aspx.designer.cs">
+      <DependentUpon>#collapse0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse1.aspx.cs">
+      <DependentUpon>#collapse1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse1.aspx.designer.cs">
+      <DependentUpon>#collapse1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse10.aspx.cs">
+      <DependentUpon>#collapse10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse10.aspx.designer.cs">
+      <DependentUpon>#collapse10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse11.aspx.cs">
+      <DependentUpon>#collapse11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse11.aspx.designer.cs">
+      <DependentUpon>#collapse11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse12.aspx.cs">
+      <DependentUpon>#collapse12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse12.aspx.designer.cs">
+      <DependentUpon>#collapse12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse13.aspx.cs">
+      <DependentUpon>#collapse13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse13.aspx.designer.cs">
+      <DependentUpon>#collapse13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse14.aspx.cs">
+      <DependentUpon>#collapse14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse14.aspx.designer.cs">
+      <DependentUpon>#collapse14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse15.aspx.cs">
+      <DependentUpon>#collapse15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse15.aspx.designer.cs">
+      <DependentUpon>#collapse15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse16.aspx.cs">
+      <DependentUpon>#collapse16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse16.aspx.designer.cs">
+      <DependentUpon>#collapse16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse17.aspx.cs">
+      <DependentUpon>#collapse17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse17.aspx.designer.cs">
+      <DependentUpon>#collapse17.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse18.aspx.cs">
+      <DependentUpon>#collapse18.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse18.aspx.designer.cs">
+      <DependentUpon>#collapse18.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse19.aspx.cs">
+      <DependentUpon>#collapse19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse19.aspx.designer.cs">
+      <DependentUpon>#collapse19.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse2.aspx.cs">
+      <DependentUpon>#collapse2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse2.aspx.designer.cs">
+      <DependentUpon>#collapse2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse20.aspx.cs">
+      <DependentUpon>#collapse20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse20.aspx.designer.cs">
+      <DependentUpon>#collapse20.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse21.aspx.cs">
+      <DependentUpon>#collapse21.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse21.aspx.designer.cs">
+      <DependentUpon>#collapse21.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse3.aspx.cs">
+      <DependentUpon>#collapse3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse3.aspx.designer.cs">
+      <DependentUpon>#collapse3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse4.aspx.cs">
+      <DependentUpon>#collapse4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse4.aspx.designer.cs">
+      <DependentUpon>#collapse4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse5.aspx.cs">
+      <DependentUpon>#collapse5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse5.aspx.designer.cs">
+      <DependentUpon>#collapse5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse6.aspx.cs">
+      <DependentUpon>#collapse6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse6.aspx.designer.cs">
+      <DependentUpon>#collapse6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse7.aspx.cs">
+      <DependentUpon>#collapse7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse7.aspx.designer.cs">
+      <DependentUpon>#collapse7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse8.aspx.cs">
+      <DependentUpon>#collapse8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse8.aspx.designer.cs">
+      <DependentUpon>#collapse8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collapse\#collapse9.aspx.cs">
+      <DependentUpon>#collapse9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collapse\#collapse9.aspx.designer.cs">
+      <DependentUpon>#collapse9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cPanel.aspx.cs">
+      <DependentUpon>cPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cPanel.aspx.designer.cs">
+      <DependentUpon>cPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="create-new-group-in-linux.aspx.cs">
+      <DependentUpon>create-new-group-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="create-new-group-in-linux.aspx.designer.cs">
+      <DependentUpon>create-new-group-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="create-zip-file-in-linux.aspx.cs">
+      <DependentUpon>create-zip-file-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="create-zip-file-in-linux.aspx.designer.cs">
+      <DependentUpon>create-zip-file-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deals#SERVERS.aspx.cs">
+      <DependentUpon>deals#SERVERS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deals#SERVERS.aspx.designer.cs">
+      <DependentUpon>deals#SERVERS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deals#Web_Hosting.aspx.cs">
+      <DependentUpon>deals#Web_Hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deals#Web_Hosting.aspx.designer.cs">
+      <DependentUpon>deals#Web_Hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dedicated_servers.aspx.cs">
+      <DependentUpon>dedicated_servers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dedicated_servers.aspx.designer.cs">
+      <DependentUpon>dedicated_servers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="domain_registration.aspx.cs">
+      <DependentUpon>domain_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="domain_registration.aspx.designer.cs">
+      <DependentUpon>domain_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="domain_registration1.aspx.cs">
+      <DependentUpon>domain_registration1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="domain_registration1.aspx.designer.cs">
+      <DependentUpon>domain_registration1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="domain_transfer.aspx.cs">
+      <DependentUpon>domain_transfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="domain_transfer.aspx.designer.cs">
+      <DependentUpon>domain_transfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="echo-command-in-linux.aspx.cs">
+      <DependentUpon>echo-command-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="echo-command-in-linux.aspx.designer.cs">
+      <DependentUpon>echo-command-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ecommerce_hosting.aspx.cs">
+      <DependentUpon>ecommerce_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ecommerce_hosting.aspx.designer.cs">
+      <DependentUpon>ecommerce_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forex_vps_hosting.aspx.cs">
+      <DependentUpon>forex_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forex_vps_hosting.aspx.designer.cs">
+      <DependentUpon>forex_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot-password.aspx.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot-password.aspx.designer.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="front-login.aspx.cs">
+      <DependentUpon>front-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="front-login.aspx.designer.cs">
+      <DependentUpon>front-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="global.aspx.cs">
+      <DependentUpon>global.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="global.aspx.designer.cs">
+      <DependentUpon>global.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="global_about_us.aspx.cs">
+      <DependentUpon>global_about_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="global_about_us.aspx.designer.cs">
+      <DependentUpon>global_about_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="global_contact.aspx.cs">
+      <DependentUpon>global_contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="global_contact.aspx.designer.cs">
+      <DependentUpon>global_contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="global_web_hosting.aspx.cs">
+      <DependentUpon>global_web_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="global_web_hosting.aspx.designer.cs">
+      <DependentUpon>global_web_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="google_workspace_india.aspx.cs">
+      <DependentUpon>google_workspace_india.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="google_workspace_india.aspx.designer.cs">
+      <DependentUpon>google_workspace_india.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="host-it-smart-reviews.aspx.cs">
+      <DependentUpon>host-it-smart-reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="host-it-smart-reviews.aspx.designer.cs">
+      <DependentUpon>host-it-smart-reviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="install-gcc-compiler-on-windows.aspx.cs">
+      <DependentUpon>install-gcc-compiler-on-windows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="install-gcc-compiler-on-windows.aspx.designer.cs">
+      <DependentUpon>install-gcc-compiler-on-windows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="install-rpm-files-on-linux.aspx.cs">
+      <DependentUpon>install-rpm-files-on-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="install-rpm-files-on-linux.aspx.designer.cs">
+      <DependentUpon>install-rpm-files-on-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="knowledgebase.aspx.cs">
+      <DependentUpon>knowledgebase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="knowledgebase.aspx.designer.cs">
+      <DependentUpon>knowledgebase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="knowledgebase_comments_feed.aspx.cs">
+      <DependentUpon>knowledgebase_comments_feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="knowledgebase_comments_feed.aspx.designer.cs">
+      <DependentUpon>knowledgebase_comments_feed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="knowledgebase_feed.aspx.cs">
+      <DependentUpon>knowledgebase_feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="knowledgebase_feed.aspx.designer.cs">
+      <DependentUpon>knowledgebase_feed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="linux_hosting.aspx.cs">
+      <DependentUpon>linux_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="linux_hosting.aspx.designer.cs">
+      <DependentUpon>linux_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="locating-and-editing-host-file-in-windows.aspx.cs">
+      <DependentUpon>locating-and-editing-host-file-in-windows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="locating-and-editing-host-file-in-windows.aspx.designer.cs">
+      <DependentUpon>locating-and-editing-host-file-in-windows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ls-command-in-linux.aspx.cs">
+      <DependentUpon>ls-command-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ls-command-in-linux.aspx.designer.cs">
+      <DependentUpon>ls-command-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="managed_vps_hosting.aspx.cs">
+      <DependentUpon>managed_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="managed_vps_hosting.aspx.designer.cs">
+      <DependentUpon>managed_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="microsoft_office_365_suite.aspx.cs">
+      <DependentUpon>microsoft_office_365_suite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="microsoft_office_365_suite.aspx.designer.cs">
+      <DependentUpon>microsoft_office_365_suite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Network_Status.aspx.cs">
+      <DependentUpon>Network_Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Network_Status.aspx.designer.cs">
+      <DependentUpon>Network_Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="password_reset.aspx.cs">
+      <DependentUpon>password_reset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="password_reset.aspx.designer.cs">
+      <DependentUpon>password_reset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="phone=919978960490.aspx.cs">
+      <DependentUpon>phone=919978960490.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="phone=919978960490.aspx.designer.cs">
+      <DependentUpon>phone=919978960490.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plesk.aspx.cs">
+      <DependentUpon>Plesk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plesk.aspx.designer.cs">
+      <DependentUpon>Plesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy-policy.aspx.cs">
+      <DependentUpon>privacy-policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy-policy.aspx.designer.cs">
+      <DependentUpon>privacy-policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy_policy.aspx.cs">
+      <DependentUpon>privacy_policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy_policy.aspx.designer.cs">
+      <DependentUpon>privacy_policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="remove-directory-in-linux.aspx.cs">
+      <DependentUpon>remove-directory-in-linux.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="remove-directory-in-linux.aspx.designer.cs">
+      <DependentUpon>remove-directory-in-linux.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReusebleClassesMethods\RegistrationModel.cs" />
+    <Compile Include="ReusebleClassesMethods\ReusedMethods.cs" />
+    <Compile Include="send.aspx.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="send.aspx.designer.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sitemap.aspx.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemap.aspx.designer.cs">
+      <DependentUpon>sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ssl_certificates.aspx.cs">
+      <DependentUpon>ssl_certificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ssl_certificates.aspx.designer.cs">
+      <DependentUpon>ssl_certificates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_dedicated_servers.aspx.cs">
+      <DependentUpon>store_dedicated_servers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_dedicated_servers.aspx.designer.cs">
+      <DependentUpon>store_dedicated_servers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_email_solution.aspx.cs">
+      <DependentUpon>store_email_solution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_email_solution.aspx.designer.cs">
+      <DependentUpon>store_email_solution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_e_commerce_hosting.aspx.cs">
+      <DependentUpon>store_e_commerce_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_e_commerce_hosting.aspx.designer.cs">
+      <DependentUpon>store_e_commerce_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_forex_vps_hosting.aspx.cs">
+      <DependentUpon>store_forex_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_forex_vps_hosting.aspx.designer.cs">
+      <DependentUpon>store_forex_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_linux_hosting.aspx.cs">
+      <DependentUpon>store_linux_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_linux_hosting.aspx.designer.cs">
+      <DependentUpon>store_linux_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_linux_managed_vps_hosting.aspx.cs">
+      <DependentUpon>store_linux_managed_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_linux_managed_vps_hosting.aspx.designer.cs">
+      <DependentUpon>store_linux_managed_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_linux_reseller_hosting.aspx.cs">
+      <DependentUpon>store_linux_reseller_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_linux_reseller_hosting.aspx.designer.cs">
+      <DependentUpon>store_linux_reseller_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_linux_self_managed_vps_hosting.aspx.cs">
+      <DependentUpon>store_linux_self_managed_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_linux_self_managed_vps_hosting.aspx.designer.cs">
+      <DependentUpon>store_linux_self_managed_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_windows_hosting.aspx.cs">
+      <DependentUpon>store_windows_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_windows_hosting.aspx.designer.cs">
+      <DependentUpon>store_windows_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_windows_vps_hosting.aspx.cs">
+      <DependentUpon>store_windows_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_windows_vps_hosting.aspx.designer.cs">
+      <DependentUpon>store_windows_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="store_wordpress_hosting.aspx.cs">
+      <DependentUpon>store_wordpress_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="store_wordpress_hosting.aspx.designer.cs">
+      <DependentUpon>store_wordpress_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="submitticket.aspx.cs">
+      <DependentUpon>submitticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="submitticket.aspx.designer.cs">
+      <DependentUpon>submitticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supporttickets.aspx.cs">
+      <DependentUpon>supporttickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supporttickets.aspx.designer.cs">
+      <DependentUpon>supporttickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="telnet-command-in-windows.aspx.cs">
+      <DependentUpon>telnet-command-in-windows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="telnet-command-in-windows.aspx.designer.cs">
+      <DependentUpon>telnet-command-in-windows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="terms.aspx.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terms.aspx.designer.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testimonials.aspx.cs">
+      <DependentUpon>testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testimonials.aspx.designer.cs">
+      <DependentUpon>testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tld.aspx.cs">
+      <DependentUpon>tld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tld.aspx.designer.cs">
+      <DependentUpon>tld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vnlbs-it-smart-reviews.aspx.cs">
+      <DependentUpon>vnlbs-it-smart-reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vnlbs-it-smart-reviews.aspx.designer.cs">
+      <DependentUpon>vnlbs-it-smart-reviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VPS.aspx.cs">
+      <DependentUpon>VPS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VPS.aspx.designer.cs">
+      <DependentUpon>VPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vps_hosting.aspx.cs">
+      <DependentUpon>vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vps_hosting.aspx.designer.cs">
+      <DependentUpon>vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Website.aspx.cs">
+      <DependentUpon>Website.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Website.aspx.designer.cs">
+      <DependentUpon>Website.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="website_builder.aspx.cs">
+      <DependentUpon>website_builder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="website_builder.aspx.designer.cs">
+      <DependentUpon>website_builder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Webuzo.aspx.cs">
+      <DependentUpon>Webuzo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Webuzo.aspx.designer.cs">
+      <DependentUpon>Webuzo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_hosting.aspx.cs">
+      <DependentUpon>web_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_hosting.aspx.designer.cs">
+      <DependentUpon>web_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_hosting_affiliates.aspx.cs">
+      <DependentUpon>web_hosting_affiliates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_hosting_affiliates.aspx.designer.cs">
+      <DependentUpon>web_hosting_affiliates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="whm.aspx.cs">
+      <DependentUpon>whm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="whm.aspx.designer.cs">
+      <DependentUpon>whm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="whois.aspx.cs">
+      <DependentUpon>whois.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="whois.aspx.designer.cs">
+      <DependentUpon>whois.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="windows_hosting.aspx.cs">
+      <DependentUpon>windows_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="windows_hosting.aspx.designer.cs">
+      <DependentUpon>windows_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="windows_vps_hosting.aspx.cs">
+      <DependentUpon>windows_vps_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="windows_vps_hosting.aspx.designer.cs">
+      <DependentUpon>windows_vps_hosting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wordpress.aspx.cs">
+      <DependentUpon>Wordpress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wordpress.aspx.designer.cs">
+      <DependentUpon>Wordpress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wordpress_hosting.aspx.cs">
+      <DependentUpon>wordpress_hosting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="wordpress_hosting.aspx.designer.cs">
+      <DependentUpon>wordpress_hosting.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Images\google-rating-logo_new.webp" />
+    <Content Include="Images\HostAdvice-rating-logo_new.webp" />
+    <Content Include="Images\login-image.webp" />
+    <Content Include="Images\star-rating-g.webp" />
+    <Content Include="Images\star-rating.webp" />
+    <Content Include="Images\Trustpilot-rating-logo_new.webp" />
+    <Content Include="Images\logo.webp" />
+    <Content Include="Knowledgebase_libraries\download.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52362</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5000/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:5000/</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
